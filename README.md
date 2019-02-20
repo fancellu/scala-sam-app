@@ -40,7 +40,7 @@ https://plugins.jetbrains.com/plugin/11349-aws-toolkit
 
 Create a local lambda invocation, for java8, and helloworld.App::handleRequest, and some example input, like
 `{
-  "name": "dino2"
+  "name": "Fred"
 }`
 
 
@@ -53,6 +53,11 @@ Events:
         Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
         Properties:
             Path: /hello
+            Method: get
+    HelloWorld2:
+        Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+        Properties:
+            Path: /hello/{proxy+}
             Method: get
 ```
 
