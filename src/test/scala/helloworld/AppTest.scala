@@ -3,12 +3,13 @@ package helloworld
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
 
 import helloworld.App.APIResponse
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest.matchers.should._
+import org.scalatest.wordspec.AnyWordSpec
 import play.api.libs.json.Json
 
 import scala.util.Try
 
-class AppTest extends WordSpec with Matchers{
+class AppTest extends AnyWordSpec with Matchers{
 
   "AppTest" should {
 
